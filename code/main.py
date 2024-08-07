@@ -21,12 +21,12 @@ text = "Привітайтеся та запитайте ім'я у Вашого
 
 # Ініціалізуємо модель Llama з вказаним шляхом до моделі та налаштуваннями
 model = Llama(
-    model_path="D:\\lm-studio\\bartowski\\Mistral-Nemo-Instruct-2407-GGUF\\Mistral-Nemo-Instruct-2407-Q4_K_M.gguf",
-    #chat_format="llama-3",
-    n_gpu_layers=11,
+    model_path="D:\\lm-studio\\lmstudio-community\\Meta-Llama-3.1-8B-Instruct-GGUF\\Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf",
+    chat_format="llama-3",
+    n_gpu_layers=5,
     flash_attn=True,
     n_threads=8,
-    n_ctx=13100,
+    n_ctx=8192,
     verbose=False) # verbose=False - вимкнення дебагуючого виведення
 
 chatMessages=[{"role": "system", "content": userPrompt}]
